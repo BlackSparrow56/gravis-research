@@ -77,6 +77,7 @@ public class GraphManager : MonoBehaviour
         _views.ForEach(value => Destroy(value.gameObject));
         _views.Clear();
         
+        parts.ForEach(value => value.ForEach(node => Destroy(node.gameObject)));
         parts.Clear();
     }
 
